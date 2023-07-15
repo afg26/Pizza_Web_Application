@@ -1,0 +1,20 @@
+
+  
+{% block content %}
+ <form method= "POST" class="form-group">
+{% csrf_token %}
+
+{%block title %} Registration {% endblock %}
+{{ form.as_p}}
+
+<button type="submit" class="btn btn-sucess"> Register </button>
+
+
+</form>
+
+
+{% endblock %}    
+      
+
+ 
+
