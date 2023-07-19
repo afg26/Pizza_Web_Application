@@ -1,57 +1,16 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-class Topping(models.Model):
-    PEPPERONI = 'pepperoni'
-    SAUSAGE = 'sausage'
-    CHICKEN = 'chicken'
-    PEPPERS = 'peppers'
-    TOPPING_CHOICES = [
-        (PEPPERONI, 'Pepperoni'),
-        (SAUSAGE, 'Sausage'),
-        (CHICKEN, 'Chicken'),
-        (PEPPERS, 'Peppers'),
-    ]
-    name = models.CharField(max_length=50, choices=TOPPING_CHOICES)
-
-    def __str__(self):
-        return self.name
-
-class Sauce(models.Model):
-    MARINARA = 'marinara'
-    ALFREDO = 'alfredo'
-    RANCH = 'ranch'
-    BUFFALO = 'buffalo'
-    SAUCE_CHOICES = [
-        (MARINARA, 'Marinara'),
-        (ALFREDO, 'Alfredo'),
-        (RANCH, 'Ranch'),
-        (BUFFALO, 'Buffalo'),
-    ]
-    name = models.CharField(max_length=50, choices=SAUCE_CHOICES)
-
-    def __str__(self):
-        return self.name
-
-class Cheese(models.Model):
-    MOZZARELLA = 'mozzarella'
-    PARMESAN = 'parmesan'
-    PROVOLONE = 'provolone'
-    CHEESE_CHOICES = [
-        (MOZZARELLA, 'Mozzarella'),
-        (PARMESAN, 'Parmesan'),
-        (PROVOLONE, 'Provolone'),
-    ]
-    name = models.CharField(max_length=50, choices=CHEESE_CHOICES)
-
-    def __str__(self):
-        return self.name
-
 class Pizza(models.Model):
+    PIZZA_CHOICES = [
+        ('pepperoni', 'Pepperoni'),
+        ('sausage', 'Sausage'),
+        ('cheese', 'Cheese'),
+        ('veggie', 'Veggie'),
+    ]
+
     name = models.CharField(max_length=100)
-    toppings = models.ManyToManyField(Topping)
-    sauce = models.ForeignKey(Sauce, on_delete=models.CASCADE)
-    cheese = models.ForeignKey(Cheese, on_delete=models.CASCADE)
+    type = models.CharField(max_length=20, choices=PIZZA_CHOICES, default='pepperoni')
 
     def __str__(self):
         return self.name

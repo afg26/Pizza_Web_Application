@@ -5,23 +5,13 @@
 </head>
 <body>
     <h1>Your Cart</h1>
-    <a href="{% url 'Home Page' %}">Home</a> <!-- Add this line for the Home button -->
+    <a href="{% url 'Home Page' %}">Home</a>
     {% if cart_details %}
         <ul>
             {% for cart_item in cart_details %}
                 <li>
                     <strong>{{ cart_item.pizza.name }}</strong> <br>
-                    Sauce: {{ cart_item.sauce }} <br>
-                    Cheese: {{ cart_item.cheese }} <br>
-                    Toppings:
-                    <ul>
-                        {% for topping in cart_item.pizza.toppings.all %}
-                            <li>{{ topping.name }}</li>
-                        {% empty %}
-                            <li>No toppings chosen</li>
-                        {% endfor %}
-                    </ul>
-                    <form method="post" action="{% url 'remove_from_cart' cart_item.pizza.id %}">
+                    <form method="post" action="{% url 'Remove From Cart' %}">
                         {% csrf_token %}
                         <input type="hidden" name="pizza_id" value="{{ cart_item.pizza.id }}">
                         <input type="submit" value="Remove from Cart">

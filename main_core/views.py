@@ -15,13 +15,12 @@ def MenuPage(request):
     return render(request, 'Menu_Page.html', context)
 
 @login_required
-def create(request, pizza_id=None):
+def create(request):
     if request.method == 'POST':
         form = PizzaForm(request.POST)
         if form.is_valid():
-            pizza = form.save(commit=False)
-            pizza.name = "Customized Pizza"
-            pizza.save()
+            pizza_type = form.cleaned_data['pizza_type']
+            pizza = Pizza.objects.create(name=f"{pizza_type.title()} Pizza", type=pizza_type)
 
             user_cart, _ = Cart.objects.get_or_create(user=request.user)
             user_cart.pizzas.add(pizza)
@@ -30,7 +29,10 @@ def create(request, pizza_id=None):
     else:
         form = PizzaForm()
 
-    return render(request, 'create.html', {'form': form})
+    context = {
+        'form': form,
+    }
+    return render(request, 'create.html', context)
 
 @login_required
 def view_cart(request):
@@ -39,15 +41,8 @@ def view_cart(request):
 
     cart_details = []
     for pizza in pizzas_in_cart:
-        toppings = ', '.join(topping.name for topping in pizza.toppings.all())
-        sauce = pizza.sauce.name
-        cheese = pizza.cheese.name
-
         cart_details.append({
             'pizza': pizza,
-            'toppings': toppings,
-            'sauce': sauce,
-            'cheese': cheese,
         })
 
     context = {
@@ -56,7 +51,7 @@ def view_cart(request):
     return render(request, 'view_cart.html', context)
 
 @login_required
-def remove_from_cart(request, pizza_id=None):
+def remove_from_cart(request):
     if request.method == 'POST':
         pizza_id = request.POST.get('pizza_id')
         try:
