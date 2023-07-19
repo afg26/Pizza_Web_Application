@@ -8,6 +8,9 @@ def Home(request):
 def MenuPage(request):
     return render(request, 'Menu_Page.html')
 
+def About_Page(request):
+    return render(request, 'about.html')
+
 
 
 
