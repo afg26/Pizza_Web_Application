@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customize Your Pizza</title>
+</head>
+<body>
+    <h1>Customize Your Pizza</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="submit" value="Add to Cart">
+    </form>
+</body>
+</html>

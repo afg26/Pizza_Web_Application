@@ -1,0 +1,122 @@
+* { box-sizing: border-box; }
+body { background-color: linear-gradient(135deg, #e6e2e9, #200d30);
+       background-repeat: no-repeat;
+       color: #200d30;
+       font-family: Verdana, Arial, sans-serif;
+       margin: 0%;
+}
+#wrapper { margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        background:linear-gradient(135deg, #e6e2e9, #200d30);
+}
+header { background-color:linear-gradient(135deg, #e6e2e9, #200d30); 
+         color:#200d30; 
+         font-family:Georgia, serif;
+         
+         font-size: 2em;
+}
+header a { text-decoration: none;}
+header a:link { color: #200d30; }
+header a:visited { color: #200d30; }
+header a:hover { color: #200d30; }
+
+h1 { text-align: center;
+     font-size: 1.5em;
+     text-decoration: none;
+     color:#200d30;
+}
+h2  { color:#200d30;
+      font-family:Georgia, serif;
+      text-align: center;
+      font-size: 1.5em;
+      text-decoration: none;
+}
+a { text-decoration: none;}
+nav { background-color: linear-gradient(135deg, #611f6e, #200d30);
+      text-align: center;
+      font-size: 1.2em;
+} 
+nav a { text-decoration: none;
+        color: #200d30; }
+
+nav a:link { color: #200d30; }
+nav a:visited { color: #200d30; }
+nav a:hover { color: #200d30; }
+nav ul { display:flex;
+         flex-direction: column;
+         list-style-type: none;
+         padding: 0;
+         margin: 0;
+         font-size: 1.4em;
+         font-family:Georgia, serif;
+         font-weight: bold;
+         color: #200d30;
+
+
+}
+
+nav li { padding: .5em 1em;
+         width: 100%;
+         border-bottom: 1px solid #200d30;}
+
+main { display: block;
+       padding: 0 1em 1em 0;
+}
+#pizza { height: 600px;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          background-image:url(pizza1.JPG);
+}
+
+#mobile { display: inline; }
+#desktop { display: none; }
+section { padding-left: .5em;
+          padding-right: .5em;
+}
+footer { font-size:.70em;
+         font-style:italic;
+         text-align:center;
+         padding: 1em;
+         background: linear-gradient(135deg, #e6e2e9, #200d30);
+}
+
+td, th { border: 1px solid #200d30;
+         padding: 5px;
+}
+td { text-align: center;}
+.text { text-align: left;}
+tr:nth-of-type(even){ background-color: #200d30;}
+
+
+input, textarea { margin-bottom: .5em;}
+
+@media (min-width: 600px) {
+        h1 { font-size: 2em;
+             letter-spacing: .25em;}
+        h2 { font-size: 2em;
+             letter-spacing: .25em;}
+        nav ul { display: flex; 
+                 flex-flow: row nowrap;
+                 justify-content: space-around;
+                 padding-right: 2em;}
+        nav li { width: 12em;
+                 border-bottom: none;}
+        section { padding-left: 2em;
+                  padding-right: 2em;}
+        #mobile { display: none; }
+        #desktop { display: inline; }
+        #pizza { background-size: 100% 100%;}
+        
+}
+@media (min-width: 1024px) {
+        body { background-image:
+                linear-gradient(135deg, #e6e2e9, #200d30);
+}
+        nav ul { padding-right: 10%;
+                 padding-left: 10%;}
+        #wrapper { margin: auto;
+                   width: 80% ;}
+        #pizza { background-size: 100% 100%;}
+        
+}

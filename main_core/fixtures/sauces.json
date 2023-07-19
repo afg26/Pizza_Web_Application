@@ -1,0 +1,30 @@
+[
+    {
+        "model": "main_core.sauce",
+        "pk": 1,
+        "fields": {
+            "name": "Marinara"
+        }
+    },
+    {
+        "model": "main_core.sauce",
+        "pk": 2,
+        "fields": {
+            "name": "Alfredo"
+        }
+    },
+    {
+        "model": "main_core.sauce",
+        "pk": 3,
+        "fields": {
+            "name": "Ranch"
+        }
+    },
+    {
+        "model": "main_core.sauce",
+        "pk": 4,
+        "fields": {
+            "name": "Buffalo"
+        }
+    }
+]

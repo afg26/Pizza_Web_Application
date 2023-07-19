@@ -1,0 +1,30 @@
+[
+    {
+        "model": "main_core.topping",
+        "pk": 1,
+        "fields": {
+            "name": "Pepperoni"
+        }
+    },
+    {
+        "model": "main_core.topping",
+        "pk": 2,
+        "fields": {
+            "name": "Sausage"
+        }
+    },
+    {
+        "model": "main_core.topping",
+        "pk": 3,
+        "fields": {
+            "name": "Chicken"
+        }
+    },
+    {
+        "model": "main_core.topping",
+        "pk": 4,
+        "fields": {
+            "name": "Peppers"
+        }
+    }
+]

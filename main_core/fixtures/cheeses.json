@@ -1,0 +1,23 @@
+[
+    {
+        "model": "main_core.cheese",
+        "pk": 1,
+        "fields": {
+            "name": "Mozzarella"
+        }
+    },
+    {
+        "model": "main_core.cheese",
+        "pk": 2,
+        "fields": {
+            "name": "Parmesan"
+        }
+    },
+    {
+        "model": "main_core.cheese",
+        "pk": 3,
+        "fields": {
+            "name": "Provolone"
+        }
+    }
+]
