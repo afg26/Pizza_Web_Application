@@ -1,0 +1,86 @@
+<?php
+
+session_start();
+
+if($_POST['LogIn'])
+{
+	$servername = "127.0.0.1";
+	$username = "root";
+	$password = "";
+	$dbname = "dbdatabase";
+
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	
+	$email = strip_tags($_POST['Email']);
+	$password = strip_tags($_POST['Password']);
+	
+	$sql = "SELECT UserID, Email, Password FROM users WHERE Email = '$email'";
+	
+	$query = mysqli_query($conn, $sql);	
+	
+	if($query)
+	{
+		$row = mysqli_fetch_row($query);
+		$userid = $row[0];
+		$dbEmail = $row[1];
+		$dbPassword = $row[2];
+	}
+	
+	if($email == $dbEmail && $password == $dbPassword)
+	{
+		
+		$_SESSION['Email'] = $email;
+		$_SESSION['id'] = $userid;
+		
+	}
+	else
+	{
+		
+		$message = "Incorect username or password";
+		echo "<script type='text/javascript'>alert('$message');</script>";
+	}
+}
+
+$_SESSION = array();
+session_destroy();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home Baked Pizza</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="pizza.css">
+<meta name="description" 
+content="Home Baked Pizza">
+</head>
+<body>
+<header>       
+  <a href="index.html"><h1>Home Baked Pizza</h1></a>
+</header> 
+<nav>
+  <ul>
+    <li><a href="sample.html">Sample</a></li>
+    <li><a href="create.html">Create Your Own</a></li>
+    <li><a href="order.html">Orders</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>  
+</nav>
+<div id="wrapper">
+<div id="pizza"></div>
+<main>
+<h1>Home Baked Pizza</h1>
+<section>
+<h2>WE KNOW YOU LOVE OUR PIZZA</h2>
+</section>
+</main>
+<footer>
+  Copyright &copy; 2023 Home Baked Pizza<br>
+  <a href="mailto:cscholl9@ivytech.edu">cscholl9@ivytech.edu</a>
+</footer>
+</div>
+</body>
+</html>
+
+

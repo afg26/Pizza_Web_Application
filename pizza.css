@@ -1,0 +1,115 @@
+* { box-sizing: border-box; }
+body { background-color: #d8c924;
+       background-repeat: no-repeat;
+       color: #0d0d10;
+       font-family: Verdana, Arial, sans-serif;
+       margin: 0%;
+}
+#wrapper { margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        background: #e02323;
+}
+header { background-color:#e02323; 
+         color:#666666; 
+         font-family:Georgia, serif;
+         padding: 1em;
+}
+header a { text-decoration: none;}
+header a:link { color: #0d0d10; }
+header a:visited { color: #0d0d10; }
+header a:hover { color: #0d0d10; }
+
+h1 { text-align: center;
+     font-size: 1.5em;
+     text-decoration: none;
+     color:#0d0d10;
+}
+h2  { color:#d8c924;
+      font-family:Georgia, serif;
+      text-align: center;
+      font-size: 1.5em;
+      text-decoration: none;
+}
+a { text-decoration: none;}
+nav { background-color: #d8c924;
+      text-align: center;
+      font-size: 1.2em;
+} 
+nav a { text-decoration: none;
+        color: #0d0d10; }
+
+nav a:link { color: #0d0d10; }
+nav a:visited { color: #060708; }
+nav a:hover { color: #e02323; }
+nav ul { display:flex;
+         flex-direction: column;
+         list-style-type: none;
+         padding: 0;
+         margin: 0;
+}
+
+nav li { padding: .5em 1em;
+         width: 100%;
+         border-bottom: 1px solid #b81b1b;}
+
+main { display: block;
+       padding: 0 1em 1em 0;
+}
+#pizza { height: 600px;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          background-image:url(pizza2.JPG);
+}
+
+#mobile { display: inline; }
+#desktop { display: none; }
+section { padding-left: .5em;
+          padding-right: .5em;
+}
+footer { font-size:.70em;
+         font-style:italic;
+         text-align:center;
+         padding: 1em;
+         background: #e4d825;
+}
+
+td, th { border: 1px solid #e02323;
+         padding: 5px;
+}
+td { text-align: center;}
+.text { text-align: left;}
+tr:nth-of-type(even){ background-color: #e02323;}
+
+
+input, textarea { margin-bottom: .5em;}
+
+@media (min-width: 600px) {
+        h1 { font-size: 2em;
+             letter-spacing: .25em;}
+        h2 { font-size: 2em;
+             letter-spacing: .25em;}
+        nav ul { display: flex; 
+                 flex-flow: row nowrap;
+                 justify-content: space-around;
+                 padding-right: 2em;}
+        nav li { width: 12em;
+                 border-bottom: none;}
+        section { padding-left: 2em;
+                  padding-right: 2em;}
+        #mobile { display: none; }
+        #desktop { display: inline; }
+        #pizza { background-size: 100% 100%;}
+        
+}
+@media (min-width: 1024px) {
+        body { background-image:
+        linear-gradient(to bottom, #c1e996 20%, #f4a021 60%, #c1e996 100%);
+}
+        nav ul { padding-right: 10%;
+                 padding-left: 10%;}
+        #wrapper { margin: auto;
+                   width: 80%;}
+        #pizza { background-size: 100% 100%;}
+        
+}
