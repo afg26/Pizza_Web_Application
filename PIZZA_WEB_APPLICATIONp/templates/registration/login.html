@@ -5,18 +5,18 @@
 
     {% block content %}
 
-    {% load crispy_forms_tags %}
-    
-      <form method= "post" class="from-group">
+   
+      <div class="formlogin">
+      <form method= "post" class="form-group">
           {% csrf_token %}
       
          
           {{ form.as_p}}
 
           <button type="submit" class="btn btn-sucess"> Login </button>
-
-         
+       
       </form>
+    </div>
 
     {% endblock %} 
 

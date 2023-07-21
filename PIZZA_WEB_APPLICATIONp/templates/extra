@@ -1,0 +1,20 @@
+
+<div class="position01">
+{{ form.username}}
+</div>
+
+<div class="position02">
+{{ form.email}}
+</div>
+
+<div class="position03">
+{{ form.phone_number}}
+</div>
+
+<div class="position04">
+    {{ form.password1}}
+</div>
+
+<div class="position05">
+    {{ form.password2}}
+</div>

@@ -2,8 +2,14 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <style>
+
+    .body-color{
+        background:linear-gradient(135deg, #e6e2e9, #200d30) ;
+    }
     header { background-color:#200d30; 
          color:white; 
          font-family:Georgia, serif;
@@ -11,20 +17,159 @@
          text-align: center;
          font-size: 2em;
         }
+    
+    
+    .position01{
+        position: absolute;
+        align-items: center;
+        left: 850px;
+        top: 350px;
+        border: 3px solid #2f1d46;
+    }
+    .position02{
+        position: absolute;
+        align-items: center;
+        left: 850px;
+        top: 390px;
+        border: 3px solid #2f1d46;
+    }
+
+    .position03{
+        position: absolute;
+        align-items: center;
+        left: 850px;
+        top: 430px;
+        border: 3px solid #2f1d46;
+    }
+    .position04{
+        position: absolute;
+        align-items: center;
+        right: 444px;
+        bottom: 230px;
+        border: 3px solid #2f1d46;
+    }
+    .position05{
+        position: absolute;
+        align-items: center;
+        right: 444px;
+        bottom: 210px;
+        border: 3px solid #2f1d46;
+    }
+
+
+    .btx {
+        background: linear-gradient(135deg, #e6e2e9, #200d30);
+        position: absolute;
+        align-items: center;
+        right: 850px;
+        bottom: 190px;
+        border: 3px solid #2f1d46;
+    }
+    .formm{
+        background: transparent;
+        position: fixed;
+        top: 350px;
+        left: 650px;
+    }
+
+    .formlogin{
+        background: transparent;
+        position: fixed;
+        top: 380px;
+        left: 800px;
+    }
+
+    .social-icons{
+	padding:30px;
+	background-color:transparent;
+    text-align: center;
+    position: fixed;
+    left: 850px;
+    bottom: 50px;
+}
+
+
+.social-icons a{
+	color:#200d30;
+  line-height:30px;
+  font-size:30px;
+  margin: 0 5px;
+  text-decoration:none;
+  
+}
+.social-icons a i{
+	line-height:30px;
+  font-size:30px;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1); 
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1); 
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+}
+.social-icons a:hover i{
+  box-shadow: 0px 0px 150px #000000;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);   
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.5);
+}
+
+
+    
 
 
 </style>
 
 </head>
    
-<body>
+<body class="body-color">
         <header>       
             <h1>HOME BAKED PIZZA</h1>
         </header>
+        {% block content02 %}
+        {%endblock%}
+        
         {% block content %}
         {% endblock %}
 
-    
+        {% block content01 %}
+        {% endblock %}
+
+   
+        
+
+        <div class="social-icons">
+            <a href="#"  title="facebook"> 
+              <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+            <a href="#" title="twitter"> 
+              <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            </a>
+            <a href="#" title="instagram">  
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" title="youtube">
+              <i class="fa fa-youtube-square" aria-hidden="true"></i>
+            </a>
+            <a href="#" title="linkedin">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+            <a href="#" title="pinterest">
+              <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+            </a>
+           
+          </div>
+
+
+
 </body>
 
 </html>

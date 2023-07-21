@@ -7,26 +7,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form | CodingLab</title> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="static/style.css">
 
+    <style>
+    .img1{
+
+      position: fixed;
+      right: 300px;
+    
+    }
+
+    .img2{
+      
+      position: fixed;
+      left: 300px;
+
+      
+    }
+    .lable{
+      
+      background-color: Transparent;
+      position: fixed;
+      right: 350px;
+      top: 260px;
+      font-size: 3em;
+      font-weight: bold;
+
+    
+    }
+    .lable1{
+      
+      background-color: Transparent;
+      position: fixed;
+      left: 350px;
+      top: 260px;
+      font-size: 3em;
+      font-weight: bold;
+
+    
+    }
+
+
+
+  .social-icons{
+	padding:30px;
+	background-color:transparent;
+  text-align: center;
+  position: fixed;
+  bottom: 50px;
+}
+
+
+.social-icons a{
+	color:#200d30;
+  line-height:30px;
+  font-size:30px;
+  margin: 0 5px;
+  text-decoration:none;
+  
+}
+.social-icons a i{
+	line-height:30px;
+  font-size:30px;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1); 
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1); 
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+}
+.social-icons a:hover i{
+  box-shadow: 0px 0px 150px #000000;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);   
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.5);
+}
+
+
+
+  </style>
 
   </head>
   <body>
+          <div class="lable">
+            <label> Login </label>
+          </div>
+          <div class="lable1">
+            <label> Registration </label>
+          </div>
 
-        <div class="title"><span>  Choose from Options  </span></div>
-        <form>
-          
-          
-          <button type="submit" class="btn btn-sucess"> <a href="registration/login">  Login   </a></button>
-         
+
+
+          </div>
+          <div  class="img2">
+          <a href="./sign_up"> 
+            <img src="static/reg.png" width="420" height="480">
+          </a>
+          </div>
+
+        
+          <div  class="img1">
+            <a href="registration/login">  
+            <img src="static/login.png" width="350" height="315">
+            </a>
+          </div>
+
+
+
+          <div class="social-icons">
+            <a href="#"  title="facebook"> 
+              <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+            <a href="#" title="twitter"> 
+              <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            </a>
+            <a href="#" title="instagram">  
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" title="youtube">
+              <i class="fa fa-youtube-square" aria-hidden="true"></i>
+            </a>
+            <a href="#" title="linkedin">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+            <a href="#" title="pinterest">
+              <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+            </a>
+           
+          </div>
+
+
+
+
+
+
+
 
           
-          <button type="submit" class="btn btn-sucess"> <a href="./sign_up">  Sign Up   </a> </button>
-    
-
-        </form>
-      </div>
-   
   </body>
 </html>
