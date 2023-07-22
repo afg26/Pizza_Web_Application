@@ -1,0 +1,22 @@
+
+
+
+{%block title %} Login {% endblock %}
+
+    {% block content %}
+
+      <form method= "post" class="from-group">
+          {% csrf_token %}
+      
+         
+          {{ form.as_p }}
+
+          <button type="submit" class="btn btn-sucess"> Login </button>
+
+         
+      </form>
+
+    {% endblock %} 
+
+
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customize Your Pizza</title>
+</head>
+<body>
+    <h1>Customize Your Pizza</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <ul>
+            {% for pizza in pizzas %}
+                <li>{{ pizza.name }} - ${{ pizza.price }}</li> <!-- Display the pizza name and price -->
+            {% endfor %}
+        </ul>
+        <input type="submit" value="Add to Cart">
+    </form>
+</body>
+</html>
