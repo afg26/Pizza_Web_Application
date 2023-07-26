@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user_login.apps.UserLoginConfig',
+    'PIZZA_WEB_APPLICATIONp',
+    'main_core',
     
 
 

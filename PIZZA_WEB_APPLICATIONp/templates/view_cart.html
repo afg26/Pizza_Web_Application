@@ -1,0 +1,36 @@
+{% extends "./base.html" %}
+
+
+{% block content04 %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <a href="{% url 'Menu Page' %}">Home</a>
+    {% if cart_details %}
+        <ul>
+            {% for cart_item in cart_details %}
+                <li>
+                    <strong>{{ cart_item.pizza.name }} - ${{ cart_item.pizza.price }}</strong><br>
+                    <form method="post" action="{% url 'Remove From Cart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="pizza_id" value="{{ cart_item.pizza.id }}">
+                        <input type="submit" value="Remove from Cart">
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+        <h3>Total Price: ${{ total_price }}</h3>  <!-- Display the total price from the context -->
+    {% else %}
+        <p>Your cart is empty.</p>
+    {% endif %}
+
+
+
+{% endblock %}
+</body>
+</html>

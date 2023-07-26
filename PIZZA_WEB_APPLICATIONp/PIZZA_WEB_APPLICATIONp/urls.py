@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from user_login import views as v
-from Create_your_own import views as create
+#from Create_your_own import views as create
 
 
 

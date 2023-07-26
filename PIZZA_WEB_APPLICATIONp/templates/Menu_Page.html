@@ -15,9 +15,9 @@ content="Home Baked Pizza">
 </header> 
 <nav>
   <ul>
-    <li><a href="Menu_Page.html"> Simple Pizza </a></li>
-    <li><a href="Create_your_own.html">Create Your Own</a></li>
-    <li><a href="order.html">Orders</a></li>
+    <li><a href="{% url 'Home Page' %}">Home</a></li>
+    <li><a href="{% url 'Customize Pizza' %}">Order Here</a></li>
+    <li><a href="{% url 'View Cart' %}">Cart</a></li>
     <li><a href="{% url 'About' %}"> About </a></li>
   </ul>  
 </nav>
